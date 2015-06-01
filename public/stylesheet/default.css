@@ -1,0 +1,68 @@
+body {
+  padding-top: 70px;
+  padding-bottom: 30px;
+}
+
+.theme-dropdown .dropdown-menu {
+  position: static;
+  display: block;
+  margin-bottom: 20px;
+}
+
+.theme-showcase > p > .btn {
+  margin: 5px 0;
+}
+
+.theme-showcase .navbar .container {
+  width: auto;
+}
+
+#alert_message {
+	position: fixed;
+	bottom: 1em;
+	left: 0;
+	right: 0;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+#alert_message .alert {
+	position: relative;
+	z-index: 999999;
+	width: 400px;
+	left: 0;
+	right: 0;
+	margin-left: auto;
+	margin-right: auto;
+	margin-bottom: 5px;
+	text-shadow: 0 1px 0 rgba(255, 255, 255, 0.5);
+}
+
+#board_post_list .media-body { width: 100%; }
+#board_post_list .panel-body .media { margin-top: 0; }
+#board_post_list .media-meta { margin-bottom: 0; }
+#board_post_list .panel-warning .panel-body { background-color: #FCF8E3; }
+
+/* glyphicon-refresh-animate
+reference : https://gist.github.com/alexandrevicenzi/680147013e902a4eaa5d */
+.glyphicon-spin {
+	-animation: spin .7s infinite linear;
+	-ms-animation: spin .7s infinite linear;
+	-webkit-animation: spinw .7s infinite linear;
+	-moz-animation: spinm .7s infinite linear;
+}
+ 
+@keyframes spin {
+	from { transform: scale(1) rotate(0deg);}
+	to { transform: scale(1) rotate(360deg);}
+}
+  
+@-webkit-keyframes spinw {
+	from { -webkit-transform: rotate(0deg);}
+	to { -webkit-transform: rotate(360deg);}
+}
+ 
+@-moz-keyframes spinm {
+	from { -moz-transform: rotate(0deg);}
+	to { -moz-transform: rotate(360deg);}
+}

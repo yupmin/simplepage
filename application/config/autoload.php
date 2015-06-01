@@ -88,7 +88,8 @@ $autoload['drivers'] = array();
 |	$autoload['helper'] = array('url', 'file');
 */
 
-$autoload['helper'] = array();
+$autoload['helper'] = array('url', 'html', 'language', 'date', 'array', 'number', 'string', 'file', 'text', 'inflector', 'form'
+	, 'common', 'model', 'view');
 
 
 /*
@@ -120,7 +121,7 @@ $autoload['config'] = array();
 |
 */
 
-$autoload['language'] = array();
+$autoload['language'] = array('common');
 
 
 /*
