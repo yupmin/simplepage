@@ -1,7 +1,6 @@
 <?php if ( ! defined('BASEPATH')) exit('No direct script access allowed');
 class Account extends MY_Controller {
-	protected $_default_expire = 86400;
-	protected $_per_page = 10;
+	protected $_default_expire = 86400; // one day
 
 	public function __construct() {
 		parent::__construct();

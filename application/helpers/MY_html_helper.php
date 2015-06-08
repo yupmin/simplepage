@@ -19,7 +19,11 @@ function anchor_tag($href, $text = NULL, $attributes = NULL, $query_data = NULL)
 	if (is_array($href)) {
 		$href = url_for($href, $query_data);
 	} else {
-		if ($href != '#') $href = (!preg_match('!^\w+://! i', $href)) ? url_for($href, $query_data) : $href;
+		if (preg_match('/^#.*/', $href) != FALSE) {
+			// nothing
+		} else if (!preg_match('!^\w+://! i', $href)) {
+			$href = url_for($href, $query_data);
+		}
 	}
 	if (strlen($text) == 0) $text = $href;
 

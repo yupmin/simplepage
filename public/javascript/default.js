@@ -363,48 +363,6 @@ function getIframeContentJSON(iframe){
 	return response;
 }
 
-// multiple modal
-/*$(document).on('hidden.bs.modal', function (e) {
-	$(this).removeClass('fv-modal-stack');
-	$('body').data('fv_open_modals', $('body').data('fv_open_modals') - 1);
-});
-$(document).on('shown.bs.modal', function (e) {
-	// keep track of the number of open modals
-	if (typeof( $('body').data('fv_open_modals') ) == 'undefined') {
-		$('body').data('fv_open_modals', 0);
-	}
-
-	// if the z-index of this modal has been set, ignore.
-	if ($(this).hasClass('fv-modal-stack')) {
-		return;
-	}
-
-	$(this).addClass('fv-modal-stack');
-	$('body').data('fv_open_modals', $('body').data('fv_open_modals') + 1);
-	$(this).css('z-index', 1040 + (10 * $('body').data('fv_open_modals')));
-	$('.modal-backdrop').not('.fv-modal-stack').css('z-index', 1039 + (10 * $('body').data('fv_open_modals')));
-	$('.modal-backdrop').not('.fv-modal-stack').addClass('fv-modal-stack');
-});*/
-
-/*$(document).on({
-    'show.bs.modal': function () {
-        var zIndex = 1040 + (10 * $('.modal:visible').length);
-        $(this).css('z-index', zIndex);
-        setTimeout(function() {
-            $('.modal-backdrop').not('.modal-stack').css('z-index', zIndex - 1).addClass('modal-stack');
-        }, 0);
-    },
-    'hidden.bs.modal': function() {
-        if ($('.modal:visible').length > 0) {
-            // restore the modal-open class to the body element, so that scrolling works
-            // properly after de-stacking a modal.
-            setTimeout(function() {
-                $(document.body).addClass('modal-open');
-            }, 0);
-        }
-    }
-}, '.modal');*/
-
 $(document).on('click', 'a[data-action=ajax_file_post]', function(e) {
 	e.preventDefault();
 	e.stopPropagation();
